@@ -100,7 +100,9 @@ function adjustTimecodesBoundaries(words) {
 }
 
 function interpolate(wordsList) {
-  const words = interpolationOptimization(wordsList);
+  // bypass interpolationOptimization step to fix timestamp sync issue
+  // const words = interpolationOptimization(wordsList);
+  const words = wordsList;
   const indicies = [ ...Array(words.length).keys() ];
   const indiciesWithStart = [];
   const indiciesWithEnd = [];
