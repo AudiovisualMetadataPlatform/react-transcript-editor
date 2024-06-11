@@ -138,8 +138,10 @@ class TimedTextEditor extends React.Component {
         blockIdx < currentContent.blocks.length;
         blockIdx++
       ) {
-        blockMap[currentContent.blocks[blockIdx].key] =
+        if (updatedContentBlocks.blocks[blockIdx]) {
+          blockMap[currentContent.blocks[blockIdx].key] =
           updatedContentBlocks.blocks[blockIdx].key;
+        }
       }
 
       const selection = selectionState.merge({
@@ -154,7 +156,7 @@ class TimedTextEditor extends React.Component {
         newEditorState,
         selection
       );
-      this.setState({ editorState: newEditorStateSelected });
+
       return newEditorStateSelected;
     } else {
       this.setState({ editorState: newEditorState });

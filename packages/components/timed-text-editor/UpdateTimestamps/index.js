@@ -38,6 +38,8 @@ const createContentFromEntityList = (currentContent, newEntities) => {
     const blockEntites = newEntities.slice(totalWords, totalWords + wordsInBlock);
     let speaker = block.data.speaker;
 
+	if (blockEntites.length == 0) continue;
+
     if (!speaker) {
       console.log('speaker', speaker, block);
       speaker = 'U_UKN';
