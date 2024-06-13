@@ -125,7 +125,7 @@
   "homepage": "https://github.com/bbc/react-transcript-editor",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbc/react-transcript-editor.git"
+    "url": "git+https://github.com/AudiovisualMetadataPlatform/react-transcript-editor.git"
   },
   "browserslist": [
     ">0.2%",

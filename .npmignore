@@ -1,8 +1,0 @@
-src
-demo
-lib
-packages
-build
-.babelrc
-.babel.config.js
-webpack.config.js
