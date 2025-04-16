@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import returnHotKeys from './hot-keys';
 
-import style from './index.module.css';
+import * as style from './index.module.css';
 
 export const getHotKeys = returnHotKeys;
 

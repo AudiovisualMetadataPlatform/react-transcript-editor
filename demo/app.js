@@ -18,7 +18,7 @@ const DEMO_MEDIA_URL =
 const DEMO_TITLE =
   "TED Talk | Kate Darling - Why we have an emotional connection to robots";
 
-import style from "./index.module.scss";
+import * as style from './index.module.scss';
 
 class App extends React.Component {
   constructor(props) {

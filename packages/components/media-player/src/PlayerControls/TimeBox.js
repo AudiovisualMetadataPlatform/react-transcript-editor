@@ -1,7 +1,7 @@
 import React from 'react';
 import isEqual from 'react-fast-compare';
 
-import style from './index.module.scss';
+import * as style from './index.module.scss';
 
 class TimeBox extends React.Component {
   shouldComponentUpdate = (nextProps) => {

@@ -4,7 +4,7 @@ import isEqual from 'react-fast-compare';
 
 import Select from './Select';
 
-import style from './PlayerControls/index.module.scss';
+import * as style from './PlayerControls/index.module.scss';
 
 class PlaybackRate extends React.Component {
 

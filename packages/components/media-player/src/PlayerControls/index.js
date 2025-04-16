@@ -18,7 +18,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PlaybackRate from '../PlaybackRate';
 import TimeBox from './TimeBox.js';
 
-import style from './index.module.scss';
+import * as style from './index.module.scss';
 
 class PlayerControls extends React.Component {
 

@@ -7,7 +7,7 @@ import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import Toggle from './Toggle/';
 import TimecodeOffset from './TimecodeOffset';
 
-import style from './index.module.css';
+import * as style from './index.module.css';
 
 class Settings extends React.Component {
 
