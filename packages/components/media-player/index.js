@@ -7,7 +7,7 @@ import ProgressBar from './src/ProgressBar';
 
 import returnHotKeys from './src/config/defaultHotKeys';
 
-import styles from './index.module.scss';
+import * as styles from './index.module.scss';
 
 import {
   secondsToTimecode,

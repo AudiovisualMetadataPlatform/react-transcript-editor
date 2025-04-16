@@ -19,7 +19,7 @@ import {
 import Word from './Word';
 import bbcKaldiToDraft from './adapters/bbc-kaldi/index.js';
 
-import styles from './index.module.css';
+import * as styles from './index.module.css';
 
 class TimedTextEditor extends React.Component {
   constructor(props) {

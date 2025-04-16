@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './index.module.css';
+import * as styles from './index.module.css';
 
 class VideoPlayer extends React.Component {
 
