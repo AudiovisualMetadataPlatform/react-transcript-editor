@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import isEqual from 'react-fast-compare';
 
-import style from './ProgressBar.module.scss';
+import * as style from './ProgressBar.module.scss';
 
 class ProgressBar extends React.Component {
   shouldComponentUpdate = (nextProps) => {

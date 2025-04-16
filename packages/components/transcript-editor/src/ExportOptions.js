@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
 
-import style from './index.module.css';
+import * as style from './index.module.css';
 
 class ExportOptions extends React.Component {
 

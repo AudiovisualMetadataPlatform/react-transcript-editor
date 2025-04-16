@@ -16,7 +16,7 @@ import {
   secondsToTimecode
 } from '../../util/timecode-converter';
 
-import style from './WrapperBlock.module.css';
+import * as style from './WrapperBlock.module.css';
 
 const updateSpeakerName = (oldName, newName, state) => {
   const contentToUpdate = convertToRaw(state);

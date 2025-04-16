@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserEdit } from '@fortawesome/free-solid-svg-icons';
 
-import style from './WrapperBlock.module.css';
+import * as style from './WrapperBlock.module.css';
 
 class SpeakerLabel extends PureComponent {
   render() {

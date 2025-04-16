@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import style from './index.module.css';
+import * as style from './index.module.css';
 
 class Toggle extends React.Component {
   render() {

@@ -17,7 +17,7 @@ import Word from './Word';
 import sttJsonAdapter from '../../stt-adapters';
 import exportAdapter from '../../export-adapters';
 import updateTimestamps from './UpdateTimestamps/index.js';
-import style from './index.module.css';
+import * as style from './index.module.css';
 
 class TimedTextEditor extends React.Component {
   constructor(props) {

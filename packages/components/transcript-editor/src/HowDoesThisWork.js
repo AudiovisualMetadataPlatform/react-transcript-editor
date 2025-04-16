@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tooltip from 'react-simple-tooltip';
-import style from '../index.module.css';
+import * as style from '../index.module.css';
 
 const helpMessage = (
   <div className={ style.helpMessage }>

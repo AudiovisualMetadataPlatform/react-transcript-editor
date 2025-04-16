@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import style from '../index.module.css';
+import * as style from '../index.module.css';
 
 class Header extends React.Component {
 
