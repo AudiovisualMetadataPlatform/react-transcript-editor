@@ -8,15 +8,7 @@ module.exports = {
         targets: { node: 'current' }
       }
     ],
-    '@babel/preset-react',
-    [
-      'minify',
-      {
-        builtIns: false,
-        evaluate: false,
-        mangle: false
-      }
-    ]
+    '@babel/preset-react'
   ],
   plugins: [
     '@babel/plugin-proposal-object-rest-spread',
