@@ -1,7 +1,7 @@
 // code obtained from https://github.com/bbc/stt-align-node
 
 import { toWords } from 'number-to-words';
-import difflib from 'difflib';
+import { diffArrays } from 'diff';
 import everpolate from 'everpolate';
 
 /**
@@ -158,28 +158,30 @@ function alignWords(sttWords, transcriptWords) {
   });
   // # populate transcriptData with matching words
   // // if they are same length, just interpolate words ?
-  // http://qiao.github.io/difflib.js/
-  const matcher = new difflib.SequenceMatcher(null, sttWordsStripped, transcriptWordsStripped);
-  const opCodes = matcher.getOpcodes();
-
-  opCodes.forEach((opCode) => {
-    const matchType = opCode[0];
-    const sttStartIndex = opCode[1];
-    const sttEndIndex = opCode[2];
-    const baseTextStartIndex = opCode[3];
-
-    if (matchType === 'equal' ) {
-      // slice does not not include the end - hence +1
-      const sttDataSegment = sttWords.slice(sttStartIndex, sttEndIndex);
-      transcriptData.splice(baseTextStartIndex, sttDataSegment.length, ...sttDataSegment);
+  const diff = diffArrays(sttWordsStripped, transcriptWordsStripped);
+  
+  let sttIndex = 0;
+  let transcriptIndex = 0;
+  
+  diff.forEach(part => {
+    if (part.added) {
+      transcriptIndex += part.count;
+    } else if (part.removed) {
+      sttIndex += part.count;
+    } else {
+      for (let i = 0; i < part.count; i++) {
+        transcriptData[transcriptIndex] = { ...sttWords[sttIndex] };
+        sttIndex++;
+        transcriptIndex++;
+      }
     }
-
-    transcriptData.forEach((wordObject, index) => {
-      wordObject.word = transcriptWords[index];
-    });
-    // # replace words with originals
   });
-
+  
+  // Replace words with originals
+  transcriptData.forEach((wordObject, index) => {
+    wordObject.word = transcriptWords[index];
+  });
+ 
   // # fill in missing timestamps
   return interpolate(transcriptData);
 }

@@ -47,7 +47,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "core-js": "^3.41.0",
-    "difflib": "^0.2.4",
+    "diff": "^7.0.0",
     "docx": "^8.5.0",
     "draft-js": "^0.11.7",
     "everpolate": "0.0.3",
